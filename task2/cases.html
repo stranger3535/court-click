@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Court Click — My Cases</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <!-- LEFT SIDEBAR (same as dashboard, My cases active) -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="brand-mark">
+            <img src="images/logocc.svg" alt="Court Click" />
+          </div>
+          <div class="brand-name">court click</div>
+          <button class="sidebar-toggle" aria-label="Toggle sidebar">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li class="nav-item nav-item--active">
+              <li class="nav-item nav-item--active">
+              <a href="dashboard.html" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/mycases.svg" alt="" />
+                </span>
+                <span class="nav-label">Dashboard</span>
+                <span class="nav-pill"></span>
+              </a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a href="cases.html" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/mycases.svg" alt="" />
+                </span>
+                <span class="nav-label">My cases</span>
+                <span class="nav-pill">04</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <button type="button" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/true_copy.svg" alt="" />
+                </span>
+                <span class="nav-label">Certified True Copy</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/esign.svg" alt="" />
+                </span>
+                <span class="nav-label">eSign</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/notarise.svg" alt="" />
+                </span>
+                <span class="nav-label">Notarise</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <a href="alerts.html" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/mycases.svg" alt="" />
+                </span>
+                <span class="nav-label">Alerts</span>
+                <span class="nav-pill">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/timeline.svg" alt="" />
+                </span>
+                <span class="nav-label">Timeline</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/settings.svg" alt="" />
+                </span>
+                <span class="nav-label">Settings</span>
+              </button>
+            </li>
+            <li class="nav-item">
+              <a href="all-options.html" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/more_option.svg" alt="" />
+                </span>
+                <span class="nav-label">More Options</span>
+                <span class="nav-pill">04</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="refer-card">
+            <p class="refer-eyebrow">Refer &amp; Earn</p>
+            <p class="refer-text">
+              Bring your contacts to CourtClick. Earn up to ₹60,000!
+            </p>
+            <button type="button" class="btn btn-refer">Refer Now</button>
+          </div>
+
+          <button type="button" class="help-link">
+            <span>Need help? Contact Us</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- MAIN AREA: My Cases -->
+      <main class="main">
+        <!-- Top bar -->
+        <header class="main-header">
+          <div class="greeting-block">
+            <h1 class="hello-title">Hello, Ashok Raj</h1>
+            <p class="hello-sub">
+              Manage and track your cases effortlessly here.
+            </p>
+          </div>
+
+          <div class="header-actions">
+            <div class="search-box">
+              <input
+                type="search"
+                placeholder="Search by case number, petitioner name..."
+                aria-label="Search cases"
+              />
+              <button type="button" class="search-btn">
+                <img src="images/search.svg" alt="Search" />
+              </button>
+            </div>
+
+            <button type="button" class="icon-btn">
+              <img src="images/bell.svg" alt="Notifications" />
+            </button>
+
+            <button type="button" class="user-chip">
+              <span class="user-avatar">
+                <img src="images/ashok.svg" alt="Ashok Raj" />
+              </span>
+              <span class="user-name">Ashok</span>
+            </button>
+          </div>
+        </header>
+
+        <!-- DATE STRIP + LEGEND -->
+        <section class="date-strip-section">
+  <header class="date-strip-header">
+    <button class="date-nav" id="prevMonth" type="button">‹</button>
+    <h2 class="month-label" id="monthLabel">March 2021</h2>
+    <button class="date-nav" id="nextMonth" type="button">›</button>
+  </header>
+
+  <div class="date-strip" id="dateStrip">
+    <!-- JS will inject .day-cell buttons here -->
+  </div>
+
+  <div class="strip-legend">
+    <span class="legend-item">
+      <span class="dot dot-hearing"></span> Hearing Date
+    </span>
+    <span class="legend-item">
+      <span class="dot dot-holiday"></span> Court Holiday
+    </span>
+    <span class="legend-item">
+      <span class="dot dot-today"></span> Today
+    </span>
+  </div>
+</section>
+
+
+        <!-- FILTER ROW -->
+        <section class="filters-row">
+          <div class="court-filters">
+            <button class="chip chip--filled">All Courts</button>
+            <button class="chip">High Court of Kerala</button>
+            <button class="chip">NCLAT Kochi</button>
+            <button class="chip">District Court Trivandrum</button>
+          </div>
+
+          <div class="case-actions">
+            <button class="dropdown-btn">
+              All Cases 20
+              <span class="caret">▾</span>
+            </button>
+            <button class="btn btn-primary-main"><img src="images/addcase.svg" alt="">Add Case</button>
+          </div>
+        </section>
+
+        <!-- CASE LIST -->
+        <section class="cases-list" aria-label="Case list">
+          <!-- Group header for High Court -->
+          <header class="list-group-header">
+            <span class="group-court"><img src="images/highcourt.svg" alt="">High Court of Kerala</span>
+          </header>
+
+          <!-- Row 1 -->
+          <article class="case-row">
+            <div class="case-main">
+              <div class="case-parties">
+                <p class="case-title">Robin D &amp; Others (P3)</p><br>
+                <img src="images/vs.svg" alt=""><br>
+                <p class="case-subtitle">State Of Kerala &amp; Others</p>
+              </div>
+            </div>
+
+            <div class="case-meta">
+              <div class="meta-block">
+                <span class="meta-label">Case Number</span>
+                <span class="meta-value">WA 233/2024</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-label">Status</span>
+                <span class="status-pill status-pending">Pending</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-label">Tentative Date</span>
+                <span class="meta-value">15 Dec 2025</span>
+              </div>
+              <button class="icon-menu" type="button" aria-label="More options">
+                ⋮
+              </button>
+            </div>
+          </article>
+
+          <!-- Row 2 -->
+          <article class="case-row">
+            <div class="case-main">
+              <div class="case-parties">
+                <p class="case-title">Robin D &amp; Others (P3)</p><br>
+                <img src="images/vs.svg" alt=""><br>
+                <p class="case-subtitle">State Of Kerala &amp; Others</p>
+              </div>
+            </div>
+
+            <div class="case-meta">
+              <div class="meta-block">
+                <span class="meta-label">Case Number</span>
+                <span class="meta-value">WA 233/2024</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-label">Status</span>
+                <span class="status-pill status-disposed">Disposed</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-label">Tentative Date</span>
+                <span class="meta-value">15 Dec 2025</span>
+              </div>
+              <button class="icon-menu" type="button" aria-label="More options">
+                ⋮
+              </button>
+            </div>
+          </article>
+
+          <!-- Row 3 -->
+          <article class="case-row">
+            <div class="case-main">
+              <div class="case-parties">
+                <p class="case-title">Robin D &amp; Others (P3)</p><br>
+                <img src="images/vs.svg" alt=""><br>
+                <p class="case-subtitle">State Of Kerala &amp; Others</p>
+              </div>
+            </div>
+
+            <div class="case-meta">
+              <div class="meta-block">
+                <span class="meta-label">Case Number</span>
+                <span class="meta-value">WA 233/2024</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-label">Status</span>
+                <span class="status-pill status-disposed">Disposed</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-label">Tentative Date</span>
+                <span class="meta-value">15 Dec 2025</span>
+              </div>
+              <button class="icon-menu" type="button" aria-label="More options">
+                ⋮
+              </button>
+            </div>
+          </article>
+
+          <!-- Group header for NCLAT Kochi -->
+          <header class="list-group-header">
+            <span class="group-court">NCLAT Kochi</span>
+          </header>
+
+          <!-- Another sample row -->
+          <article class="case-row">
+            <div class="case-main">
+              <div class="case-parties">
+                <p class="case-title">Robin D &amp; Others (P3)</p><br>
+                <img src="images/vs.svg" alt=""><br>
+                <p class="case-subtitle">State Of Kerala &amp; Others</p>
+              </div>
+            </div>
+
+            <div class="case-meta">
+              <div class="meta-block">
+                <span class="meta-label">Case Number</span>
+                <span class="meta-value">WA 233/2024</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-label">Status</span>
+                <span class="status-pill status-pending">Pending</span>
+              </div>
+              <div class="meta-block">
+                <span class="meta-label">Tentative Date</span>
+                <span class="meta-value">15 Dec 2025</span>
+              </div>
+              <button class="icon-menu" type="button" aria-label="More options">
+                ⋮
+              </button>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

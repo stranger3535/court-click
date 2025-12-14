@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Court Click Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <!-- LEFT SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="brand-mark">
+            <img src="images/logocc.svg" alt="Court Click" />
+          </div>
+          <div class="brand-name">court click</div>
+          <button class="sidebar-toggle" aria-label="Toggle sidebar">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li class="nav-item nav-item--active">
+              <a href="dashboard.html" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/mycases.svg" alt="" />
+                </span>
+                <span class="nav-label">Dashboard</span>
+                <span class="nav-pill"></span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="cases.html" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/mycases.svg" alt="" />
+                </span>
+                <span class="nav-label">My cases</span>
+                <span class="nav-pill">04</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <button type="button" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/true_copy.svg" alt="" />
+                </span>
+                <span class="nav-label">Certified True Copy</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button type="button" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/esign.svg" alt="" />
+                </span>
+                <span class="nav-label">eSign</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button type="button" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/notarise.svg" alt="" />
+                </span>
+                <span class="nav-label">Notarise</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <a href="alerts.html" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/mycases.svg" alt="" />
+                </span>
+                <span class="nav-label">Alerts</span>
+                <span class="nav-pill">0</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <button type="button" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/timeline.svg" alt="" />
+                </span>
+                <span class="nav-label">Timeline</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button type="button" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/settings.svg" alt="" />
+                </span>
+                <span class="nav-label">Settings</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <a href="all-options.html" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/more_option.svg" alt="" />
+                </span>
+                <span class="nav-label">More Options</span>
+                <span class="nav-pill">04</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="refer-card">
+            <img src="images/refer.svg" alt="" />
+            <p class="refer-eyebrow">Refer &amp; Earn</p>
+            <p class="refer-text">
+              Bring your contacts to CourtClick. Earn up to ₹60,000!
+            </p>
+            <button type="button" class="btn btn-refer">Refer Now</button>
+          </div>
+
+          <button type="button" class="help-link">
+            <img src="images/needhelp.svg" alt="" />
+            <span>Need help? Contact Us</span>
+          </button>
+        </div>
+      </aside>
+
+<section class="dashboard-grid">
+          <!-- CENTER: MY CASES -->
+          <section class="cases-panel" aria-label="My cases">
+            <header class="cases-header">
+              <div class="cases-title-block">
+                <h2>My Cases</h2>
+                <p class="cases-sub">
+                  Manage and track all your court cases in one place.
+                </p>
+              </div>
+
+              <div class="cases-header-actions">
+                <div class="chip-row">
+                  <button type="button" class="chip chip--filled">
+                    All Courts
+                  </button>
+                  <button type="button" class="chip">
+                    High Court of Kerala
+                  </button>
+                  <button type="button" class="chip">NCLAT Kochi</button>
+                  <button type="button" class="chip">
+                    District Court Trivandrum
+                  </button>
+                </div>
+
+                <div class="cases-cta-row">
+                  <button type="button" class="btn btn-small btn-outline-main">
+                    All Cases
+                  </button>
+                  <button type="button" class="btn btn-small btn-primary-main">
+                    <img src="images/addcase.svg" alt="" />
+                    Add Case
+                  </button>
+                  <button type="button" class="text-link">View all</button>
+                </div>
+              </div>
+            </header>
+
+            <!-- CASE CARDS ROW -->
+            <div class="cases-grid">
+              <!-- Case 1 -->
+              <article class="case-card">
+                <header class="case-card-header">
+                  <div class="case-court">
+                    <span class="case-court-name">
+                      <img
+                        src="images/highcourt.svg"
+                        alt=""
+                        class="court-icon"
+                      />
+                      High Court of Kerala
+                    </span>
+
+                    <button type="button" class="case-alert-btn">
+                      <img src="images/alerts.svg" alt="" class="alert-icon" />
+                      Alert
+                    </button>
+                  </div>
+                </header>
+
+                <div class="case-body">
+                  <div class="case-parties">
+                    <div class="case-avatars">
+                      <img src="images/p1.svg" alt="" />
+                      <img src="images/p2.png" alt="" />
+                      <img src="images/p3.svg" alt="" />
+                    </div>
+                    <div class="case-text">
+                      <p class="case-title">
+                        Mr. Muhammed Mustaque (A.C.J), Mr. Shoba Annamma Eapen
+                        &amp; Mr. Aravindakshan K K (J)
+                      </p>
+                      <p class="case-subtitle">
+                        Robin D D Others vs State of Kerala &amp; Others
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="case-meta-row">
+                    <span class="meta-pill">Court No: 10</span>
+                    <span class="meta-pill">Item No: 13</span>
+                    <span class="meta-pill meta-pill--green">
+                      Current Item No: 08
+                    </span>
+                  </div>
+                </div>
+
+                <footer class="case-footer">
+                  <button type="button" class="btn btn-watch">
+                    <img src="images/VIDEO.png" alt="" />
+                    Watch Live Case
+                  </button>
+                </footer>
+              </article>
+
+              <!-- Case 2 -->
+              <article class="case-card">
+                <header class="case-card-header">
+                  <div class="case-court">
+                    <span class="case-court-name">
+                      <img
+                        src="images/highcourt.svg"
+                        alt=""
+                        class="court-icon"
+                      />
+                      High Court of Kerala
+                    </span>
+
+                    <button type="button" class="case-alert-btn">
+                      <img src="images/alerts.svg" alt="" class="alert-icon" />
+                      Alert
+                    </button>
+                  </div>
+                </header>
+
+                <div class="case-body">
+                  <div class="case-parties">
+                    <div class="case-avatars">
+                      <img src="images/p1.svg" alt="" />
+                      <img src="images/p2.png" alt="" />
+                      <img src="images/p3.svg" alt="" />
+                    </div>
+                    <div class="case-text">
+                      <p class="case-title">
+                        Another sample case details line for parties.
+                      </p>
+                      <p class="case-subtitle">
+                        Case title second line goes here.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="case-meta-row">
+                    <span class="meta-pill">Court No: 12</span>
+                    <span class="meta-pill">Item No: 07</span>
+                    <span class="meta-pill meta-pill--green">
+                      Current Item No: 03
+                    </span>
+                  </div>
+                </div>
+
+                <footer class="case-footer">
+                  <button type="button" class="btn btn-watch">
+                    <img src="images/VIDEO.png" alt="" />
+                    Watch Live Case
+                  </button>
+                </footer>
+              </article>
+            </div>
+
+            <!-- EXPLORE WHAT'S TRENDING -->
+            <section class="trending-panel" aria-label="Trending in courts">
+              <header class="trending-header">
+                <h3>Explore What’s Trending in Courtrooms</h3>
+                <button type="button" class="text-link">View all</button>
+              </header>
+
+              <div class="trending-grid">
+                <article class="trending-card">
+                  <header class="trending-top">
+                    <span class="court-label"
+                      ><img src="images/highcourt.svg" alt="" />Delhi High
+                      Court</span
+                    >
+                    <span class="alert-pill">Alert</span>
+                  </header>
+                  <h4 class="trending-title">LG and Samsung</h4>
+                  <p class="trending-sub">India’s E-waste Pricing Policy</p>
+                  <footer class="trending-footer">
+                    <button
+                      type="button"
+                      class="btn btn-small btn-outline-main"
+                    >
+                      <img src="images/VIDEO.png" alt="" />
+                      Watch Live Case
+                    </button>
+                    <button type="button" class="text-link">
+                      View Details
+                    </button>
+                  </footer>
+                </article>
+
+                <article class="trending-card">
+                  <header class="trending-top">
+                    <span class="court-label"
+                      ><img src="images/highcourt.svg" alt="" />Delhi High
+                      Court</span
+                    >
+                    <span class="alert-pill">Alert</span>
+                  </header>
+                  <h4 class="trending-title">LG and Samsung</h4>
+                  <p class="trending-sub">India’s E-waste Pricing Policy</p>
+                  <footer class="trending-footer">
+                    <button
+                      type="button"
+                      class="btn btn-small btn-outline-main"
+                    >
+                      <img src="images/VIDEO.png" alt="" />
+                      Watch Live Case
+                    </button>
+                    <button type="button" class="text-link">
+                      View Details
+                    </button>
+                  </footer>
+                </article>
+
+                <article class="trending-card">
+                  <header class="trending-top">
+                    <span class="court-label"
+                      ><img src="images/highcourt.svg" alt="" />Delhi High
+                      Court</span
+                    >
+                    <span class="alert-pill">Alert</span>
+                  </header>
+                  <h4 class="trending-title">LG and Samsung</h4>
+                  <p class="trending-sub">India’s E-waste Pricing Policy</p>
+                  <footer class="trending-footer">
+                    <button
+                      type="button"
+                      class="btn btn-small btn-outline-main"
+                    >
+                      <img src="images/VIDEO.png" alt="" />
+                      Watch Live Case
+                    </button>
+                    <button type="button" class="text-link">
+                      View Details
+                    </button>
+                  </footer>
+                </article>
+              </div>
+            </section>
+          </section>
+
+<div class="modal-backdrop" id="alertModal">
+      <div class="modal-dialog">
+        <header class="modal-header">
+          <div>
+            <h2 class="modal-title">
+              <span class="modal-icon">🔔</span>
+              Set an alert for this case
+            </h2>
+            <p class="modal-sub">
+              Never miss a hearing or update – stay in the loop.
+            </p>
+          </div>
+          <button class="modal-close" type="button" aria-label="Close alert">
+            ✕
+          </button>
+        </header>
+
+        <div class="modal-body">
+          <label class="radio-row">
+            <input type="radio" name="alertOption" value="disable" checked />
+            <span>Disable Alerts</span>
+          </label>
+
+          <label class="radio-row">
+            <input type="radio" name="alertOption" value="1" />
+            <span>Alert me 01 case before mine</span>
+          </label>
+
+          <label class="radio-row">
+            <input type="radio" name="alertOption" value="2" />
+            <span>Alert me 02 case before mine</span>
+          </label>
+
+          <label class="radio-row">
+            <input type="radio" name="alertOption" value="5" />
+            <span>Alert me 05 case before mine</span>
+          </label>
+
+          <label class="radio-row">
+            <input type="radio" name="alertOption" value="custom" />
+            <span>Custom</span>
+          </label>
+
+          <div class="custom-row">
+            <span class="custom-text">
+              Alert set before <span class="highlight">03</span> cases of mine
+            </span>
+
+            <div class="spinner">
+              <button type="button" class="spinner-btn" id="decAlert">−</button>
+              <span class="spinner-value" id="alertCount">3</span>
+              <button type="button" class="spinner-btn" id="incAlert">+</button>
+            </div>
+          </div>
+        </div>
+
+        <footer class="modal-footer">
+          <button type="button" class="btn btn-outline-main" id="cancelAlert">
+            Cancel
+          </button>
+          <button type="button" class="btn btn-primary-main" id="saveAlert">
+            Save
+          </button>
+        </footer>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

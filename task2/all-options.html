@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Court Click — Calendar</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <!-- LEFT SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="brand-mark">
+            <img src="images/logocc.svg" alt="Court Click" />
+          </div>
+          <div class="brand-name">court click</div>
+          <button class="sidebar-toggle" aria-label="Toggle sidebar">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul>
+            <li class="nav-item">
+              <a href="dashboard.html" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/mycases.svg" alt="" />
+                </span>
+                <span class="nav-label">Dashboard</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="cases.html" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/mycases.svg" alt="" />
+                </span>
+                <span class="nav-label">My cases</span>
+                <span class="nav-pill">04</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <button type="button" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/true_copy.svg" alt="" />
+                </span>
+                <span class="nav-label">Certified True Copy</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button type="button" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/esign.svg" alt="" />
+                </span>
+                <span class="nav-label">eSign</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button type="button" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/notarise.svg" alt="" />
+                </span>
+                <span class="nav-label">Notarise</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <a href="alerts.html" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/mycases.svg" alt="" />
+                </span>
+                <span class="nav-label">Alerts</span>
+                <span class="nav-pill">0</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <button type="button" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/timeline.svg" alt="" />
+                </span>
+                <span class="nav-label">Timeline</span>
+              </button>
+            </li>
+
+            <li class="nav-item">
+              <button type="button" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/settings.svg" alt="" />
+                </span>
+                <span class="nav-label">Settings</span>
+              </button>
+            </li>
+
+            <li class="nav-item nav-item--active">
+              <a href="all-options.html" class="nav-link">
+                <span class="nav-icon">
+                  <img src="images/more_option.svg" alt="" />
+                </span>
+                <span class="nav-label">More Options</span>
+                <span class="nav-pill">04</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="refer-card">
+            <p class="refer-eyebrow">Refer &amp; Earn</p>
+            <p class="refer-text">
+              Bring your contacts to CourtClick. Earn up to ₹60,000!
+            </p>
+            <button type="button" class="btn btn-refer">Refer Now</button>
+          </div>
+
+          <button type="button" class="help-link">
+            <span>Need help? Contact Us</span>
+          </button>
+        </div>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main">
+        <!-- Top bar -->
+        <header class="main-header">
+          <div class="greeting-block">
+            <h1 class="hello-title">Calendar</h1>
+            <p class="hello-sub">
+              Stay on top of your case dates with a clear calendar view.
+            </p>
+          </div>
+
+          <div class="header-actions">
+            <div class="search-box">
+              <input
+                type="search"
+                placeholder="Search by case number, petitioner name..."
+                aria-label="Search cases"
+              />
+              <button type="button" class="search-btn">
+                <img src="images/search.svg" alt="Search" />
+              </button>
+            </div>
+
+            <button type="button" class="icon-btn">
+              <img src="images/bell.svg" alt="Notifications" />
+            </button>
+
+            <button type="button" class="user-chip">
+              <span class="user-avatar">
+                <img src="images/ashok.svg" alt="Ashok Raj" />
+              </span>
+              <span class="user-name">Ashok</span>
+            </button>
+          </div>
+        </header>
+
+        <!-- FILTER CHIPS -->
+        <section class="filters-row">
+          <div class="court-filters">
+            <button class="chip chip--filled">All Courts</button>
+            <a
+              href="live-display.html"
+              class="chip"
+              style="text-decoration: none"
+              >High Court of Kerala</a
+            >
+            <button class="chip">NCLAT Kochi</button>
+            <button class="chip">District Court Trivandrum</button>
+          </div>
+        </section>
+
+        <!-- FULL CALENDAR + BOTTOM GRID -->
+        <section class="calendar-layout">
+          <!-- Two‑month calendar -->
+          <section class="calendar-card">
+            <header class="calendar-header">
+              <h2 id="monthLeftLabel">March 2025</h2>
+              <h2 id="monthRightLabel">April 2025</h2>
+            </header>
+
+            <div class="calendar-months">
+              <div class="month-table">
+                <div class="cal-weekdays">
+                  <span>Mon</span><span>Tue</span><span>Wed</span
+                  ><span>Thu</span><span>Fri</span><span>Sat</span
+                  ><span>Sun</span>
+                </div>
+                <div class="cal-days" id="leftMonthDays"></div>
+              </div>
+
+              <div class="month-table">
+                <div class="cal-weekdays">
+                  <span>Mon</span><span>Tue</span><span>Wed</span
+                  ><span>Thu</span><span>Fri</span><span>Sat</span
+                  ><span>Sun</span>
+                </div>
+                <div class="cal-days" id="rightMonthDays"></div>
+              </div>
+            </div>
+
+            <div class="calendar-legend">
+              <span class="legend-item">
+                <span class="dot dot-hearing"></span> Hearing Date
+              </span>
+              <span class="legend-item">
+                <span class="dot dot-holiday"></span> Court Holiday
+              </span>
+              <span class="legend-item">
+                <span class="dot dot-today"></span> Today
+              </span>
+            </div>
+          </section>
+
+          <!-- Bottom: day list + preview -->
+          <section class="calendar-bottom-grid">
+            <!-- Left: list for selected day -->
+            <section class="day-cases">
+              <header class="day-header">
+                <div>
+                  <p class="day-label">Thursday, June 27, 2024</p>
+                </div>
+                <div>
+                  <span class="total-label">Total Cases:</span>
+                  <span class="total-chip">04</span>
+                </div>
+              </header>
+
+              <div class="day-group-header">
+                <span class="group-court">High Court of Kerala</span>
+                <span class="group-count">04 Cases</span>
+              </div>
+
+              <article class="day-case-card">
+                <p class="case-title">Robin D &amp; Others (P3)</p>
+                <br />
+                <img src="images/vs.svg" alt="" /><br />
+                <p class="case-subtitle">State Of Kerala &amp; Others</p>
+                <span class="case-id-chip">WA 233/2024</span>
+              </article>
+
+              <article class="day-case-card">
+                <p class="case-title">Robin D &amp; Others (P3)</p>
+                <br />
+                <img src="images/vs.svg" alt="" /><br />
+                <p class="case-subtitle">State Of Kerala &amp; Others</p>
+                <span class="case-id-chip">WA 233/2024</span>
+              </article>
+
+              <article class="day-case-card">
+                <p class="case-title">Robin D &amp; Others (P3)</p>
+                <br />
+                <img src="images/vs.svg" alt="" /><br />
+                <p class="case-subtitle">State Of Kerala &amp; Others</p>
+                <span class="case-id-chip">WA 233/2024</span>
+              </article>
+            </section>
+
+            <!-- Right: preview with Case Details dropdown -->
+            <section class="calendar-preview">
+              <header class="preview-top">
+                <span class="details-id badge-pill">WA 233/2024</span>
+
+                <div class="case-top-actions">
+                  <button class="alert-chip" type="button">Alert</button>
+                  <button class="view-toggle" type="button">
+                    Timeline View
+                  </button>
+                  <button
+                    class="icon-menu"
+                    type="button"
+                    aria-label="More options"
+                  >
+                    ⋮
+                  </button>
+                </div>
+              </header>
+
+              <!-- wrapper for absolute dropdown -->
+              <div class="case-dropdown-wrapper">
+                <button
+                  class="preview-tab preview-tab--active"
+                  type="button"
+                  id="caseDetailsToggle"
+                >
+                  <img src="images/case details.svg" alt="" />
+                  <span>Case Details</span>
+                  <span class="chevron">▾</span>
+                </button>
+
+                <nav class="details-dropdown" id="caseDetailsMenu">
+                  <button class="details-item is-active" data-panel="case-main">
+                    <img src="images/ic_case.svg" alt="" />
+                    <span>Case Details</span>
+                  </button>
+                  <button class="details-item" data-panel="case-status">
+                    <img src="images/ic_status.svg" alt="" />
+                    <span>Case Status</span>
+                  </button>
+                  <button class="details-item" data-panel="connected">
+                    <img src="images/ic_connected.svg" alt="" />
+                    <span>Connected Cases</span>
+                  </button>
+                  <button class="details-item" data-panel="petitioner-adv">
+                    <img src="images/ic_petitioner.svg" alt="" />
+                    <span>Petitioner &amp; Advocate</span>
+                  </button>
+                  <button class="details-item" data-panel="respondent-adv">
+                    <img src="images/ic_respondent.svg" alt="" />
+                    <span>Respondent &amp; Advocate</span>
+                  </button>
+                  <button class="details-item" data-panel="served-on">
+                    <img src="images/ic_served.svg" alt="" />
+                    <span>Served On</span>
+                  </button>
+                  <button class="details-item" data-panel="trial-info">
+                    <img src="images/ic_trial.svg" alt="" />
+                    <span>Trial Court Information</span>
+                  </button>
+                  <button class="details-item" data-panel="ia-details">
+                    <img src="images/ic_ia.svg" alt="" />
+                    <span>IA Details</span>
+                  </button>
+                  <button class="details-item" data-panel="documents">
+                    <img src="images/ic_docs.svg" alt="" />
+                    <span>Documents</span>
+                  </button>
+                  <button class="details-item" data-panel="history">
+                    <img src="images/ic_history.svg" alt="" />
+                    <span>History of Case Hearing</span>
+                  </button>
+                  <button class="details-item" data-panel="judgement">
+                    <img src="images/ic_judgement.svg" alt="" />
+                    <span>Judgement</span>
+                  </button>
+                  <button class="details-item" data-panel="interim">
+                    <img src="images/ic_interim.svg" alt="" />
+                    <span>Interim Orders</span>
+                  </button>
+                  <button class="details-item" data-panel="fir">
+                    <img src="images/ic_fir.svg" alt="" />
+                    <span>FIR Details</span>
+                  </button>
+                </nav>
+              </div>
+
+              <div class="details-panels">
+                <div class="details-panel is-active" id="case-main">
+                  <section class="party-row">
+                    <div class="party-block">
+                      <div class="row-heading">
+                        <img src="images/petitioner.svg" alt="" />
+                        <h3>Petitioner</h3>
+                      </div>
+                      <p class="party-name">Robin D (P3)</p>
+                      <p class="party-sub">Mohan Kumar</p>
+                      <button class="small-chip" type="button">
+                        +2 others
+                      </button>
+                    </div>
+
+                    <div class="party-block">
+                      <div class="row-heading">
+                        <img src="images/responder.svg" alt="" />
+                        <h3>Respondent</h3>
+                      </div>
+                      <p class="party-name">State Of Kerala</p>
+                      <p class="party-sub">Income Tax Department</p>
+                      <button class="small-chip" type="button">
+                        +2 others
+                      </button>
+                    </div>
+                  </section>
+
+                  <section class="judges-row">
+                    <div class="row-heading">
+                      <img src="images/judge.svg" alt="" />
+                      <h3>Judges</h3>
+                    </div>
+                    <div class="judge-chips">
+                      <img src="images/p5.svg" alt="" />
+                      <button class="small-chip" type="button">
+                        Mr. Rajagopal Menon (J)
+                      </button>
+                      <img src="images/p4.svg" alt="" />
+                      <button class="small-chip" type="button">
+                        Mrs. C Roy (J)
+                      </button>
+                    </div>
+                  </section>
+
+                  <section class="range-row">
+                    <div class="row-heading">
+                      <img src="images/itemrange.svg" alt="" />
+                      <h3>Item Range</h3>
+                    </div>
+                    <div class="range-chips">
+                      <button
+                        class="range-pill range-pill--active"
+                        type="button"
+                      >
+                        1–9
+                      </button>
+                      <button class="range-pill" type="button">101–140</button>
+                      <button class="range-pill" type="button">201–240</button>
+                      <button class="range-pill" type="button">301–340</button>
+                      <button class="range-pill" type="button">401–440</button>
+                    </div>
+                  </section>
+                </div>
+
+                <div class="details-panel" id="case-status">
+                  <h3>Case Status</h3>
+                  <p>Case status content goes here.</p>
+                </div>
+
+                <div class="details-panel" id="connected">
+                  <h3>Connected Cases</h3>
+                  <p>Connected cases content goes here.</p>
+                </div>
+
+                <div class="details-panel" id="petitioner-adv">
+                  <h3>Petitioner &amp; Advocate</h3>
+                  <p>Petitioner &amp; advocate details go here.</p>
+                </div>
+
+                <div class="details-panel" id="respondent-adv">
+                  <h3>Respondent &amp; Advocate</h3>
+                  <p>Respondent &amp; advocate details go here.</p>
+                </div>
+
+                <div class="details-panel" id="served-on">
+                  <h3>Served On</h3>
+                  <p>Served on details go here.</p>
+                </div>
+
+                <div class="details-panel" id="trial-info">
+                  <h3>Trial Court Information</h3>
+                  <p>Trial court information goes here.</p>
+                </div>
+
+                <div class="details-panel" id="ia-details">
+                  <h3>IA Details</h3>
+                  <p>IA details go here.</p>
+                </div>
+
+                <div class="details-panel" id="documents">
+                  <h3>Documents</h3>
+                  <p>Documents content goes here.</p>
+                </div>
+
+                <div class="details-panel" id="history">
+                  <h3>History of Case Hearing</h3>
+                  <p>History content goes here.</p>
+                </div>
+
+                <div class="details-panel" id="judgement">
+                  <h3>Judgement</h3>
+                  <p>Judgement details go here.</p>
+                </div>
+
+                <div class="details-panel" id="interim">
+                  <h3>Interim Orders</h3>
+                  <p>Interim orders go here.</p>
+                </div>
+
+                <div class="details-panel" id="fir">
+                  <h3>FIR Details</h3>
+                  <p>FIR details go here.</p>
+                </div>
+              </div>
+            </section>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
